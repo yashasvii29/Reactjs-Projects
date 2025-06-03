@@ -82,9 +82,33 @@ console.log(desc);
 
 // destructuring of array
 const arr = [1,2,3];
-let first = arr[0];
-let second = arr[1];
-let third = arr[2];
 
+// let first = arr[0];
+// let second = arr[1];
+// let third = arr[2];
 
+// console.log(first,second,third);
+
+// instead of accessing the value by index we can destructuring the array
+const [first,second,third] = arr;
+console.log(first,second,third);
+
+// default parameters, spread and rest operators
+
+function mulOfTwoNumbers(num1=1,num2=2){ // here we have assigned thedefault values to the parameters they are default parameters 
+    console.log(num1,num2);
+    return num1*num2;
+}
+
+console.log(mulOfTwoNumbers(4*5)); // output would be 20;
+console.log(mulOfTwoNumbers()); // if we dont pass the arguments while calling the function to the parameters then parameters will take the default values which we have assigned as a default parameters
+console.log(mulOfTwoNumbers(5)); // we have pass only single argument so num2 will take default value
+
+// spread operator
+const arr2 = [2,3,4];
+const arr3 = [6,7,9];
+
+console.log([999, ...arr2,90, ...arr3,1000]);
+
+// rest operator
 
